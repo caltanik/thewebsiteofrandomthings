@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            font-size: 36px;
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to TWORT, have fun exploring!</h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'a' || event.key === 'A') {
+                document.getElementById('puppyImg').style.display = 'block';
+            }
+        });
+    </script>
+</head>
+<body>
+    <img id="puppyImg" src="https://static.boredpanda.com/blog/wp-content/uploads/2018/08/5b72822119a08_Tj9_vp3oPT0YqwhzZUtfBIVHcz3JdsGXPe6RQMetKCA__700.jpg" style="display: none;" alt="Cute Puppy">
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .text {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.boredpanda.com/blog/wp-content/uploads/2018/08/5b72822119a08_Tj9_vp3oPT0YqwhzZUtfBIVHcz3JdsGXPe6RQMetKCA__700.jpg" alt="Cute Puppy" width="200">
+        <div class="text">
+            <p>Look at the cute puppy!!! Isn't it so cute?</p>
+        </div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .joke {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <p>Want to hear a joke?</p>
+    <button onclick="showJoke()">Yes</button>
+    <button onclick="hideJoke()">No</button>
+    <div class="joke" id="joke">
+        <p>Why do programmers prefer dark mode?</p>
+        <p>Because the light attracts bugs!</p>
+    </div>
+
+    <script>
+        function showJoke() {
+            document.getElementById("joke").style.display = "block";
+        }
+
+        function hideJoke() {
+            document.getElementById("joke").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+<button onclick="<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <img src="https://cdn.prod.website-files.com/646218c67da47160c64a84d5/6463443b4648fab8dc73c49f_45.png" alt="Description of the image">
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #info {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: lightgray;
+        padding: 10px;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+    <button onclick="showInfo()">Info Label</button>
+    <div id="info">
+        <p>Version: v1.3.5</p>
+        <p>Creator: mrcaltan</p>
+        <p>Server Status: ???</p>
+        <p>Stuff to do in the website: See one joke, Stare at a puppy for hours, Play some music, and play Flappy Bird.</p>
+        <p>Lines of code: 452
+        <p> Changelog: Added News to the Info Label.
+        <p> News: This website will no longer be updated, As it would be very messed up and unable to use. I have tried to think of something to do about it, but unfortunately, There's nothing i can do.
+    </div>
+
+    <script>
+        function showInfo() {
+            var info = document.getElementById("info");
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Simple styling for the button */
+        .play-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play Some Music!</h1>
+    <button class="play-button" onclick="playMusic()">music</button>
+    
+    <audio id="sneakySnitch" src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sneaky%20Snitch.mp3"></audio>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('sneakySnitch');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0; // Optionally reset to the start
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Simple styling for the volume slider */
+        .volume-control {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        .volume-control label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volume Control</h1>
+
+    <!-- Volume Control Slider -->
+    <div class="volume-control">
+        <label for="volumeSlider">Volume:</label>
+        <input type="range" id="volumeSlider" min="0" max="100" value="100" step="1">
+    </div>
+
+    <script>
+        // Function to update the volume for all audio elements
+        function updateVolume() {
+            var volume = document.getElementById('volumeSlider').value / 100;
+            var audios = document.querySelectorAll('audio');
+            audios.forEach(function(audio) {
+                audio.volume = volume;
+            });
+        }
+
+        // Add event listener to the volume slider
+        document.getElementById('volumeSlider').addEventListener('input', updateVolume);
+
+        // Set initial volume
+        updateVolume();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Default Light Mode Styles */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dark Mode and Light Mode Toggle</h1>
+    <button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+
+    <script>
+        // Function to toggle between dark and light mode
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Optional: Check for saved preference and apply it on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('dark-mode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        // Save preference to local storage
+        document.body.addEventListener('classChange', () => {
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Website of Random Things</title>
+    <style>
+        /* Style for the button */
+        .redirect-button {
+            display: flex;
+            align-items: center;
+            background-color: #7289da; /* Discord blue color */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .redirect-button img {
+            height: 24px; /* Adjust the logo size */
+            width: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Button element with an onclick event -->
+    <button class="redirect-button" onclick="window.location.href='https://discord.gg/4hMz8nqbxV'">
+        <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6ac3c481f273141736_icon_clyde_black_RGB.png" alt="Discord Logo">
+        Join the Discord!
+    </button>
+</body>
+</html>
+<title>The Website of Random Things</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .donate-link {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #00BFAE; /* Cash App green */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .donate-link:hover {
+            background-color: #009B77; /* Darker green */
+        }
+    </style>
+</head>
+<body>
+    <h1>Support Us</h1>
+    <p>Donate:</p>
+    <a href="https://cash.app/$caltanik" class="donate-link" target="_blank">Donate via Cash App</a>
+    <p>Or open the Cash App app:</p>
+    <a href="cashapp://$caltanik" class="donate-link">Open Cash App</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .flappy-button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #00BFAE; /* Example button color */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .flappy-button:hover {
+            background-color: #009B77; /* Darker color on hover */
+        }
+        #flappy-game {
+            display: none;
+            width: 320px; /* Adjust width as needed */
+            height: 480px; /* Adjust height as needed */
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Play Flappy Bird</h1>
+    <button class="flappy-button" onclick="showGame()">Play Flappy Bird</button>
+    <iframe id="flappy-game" src="https://flappybird.io" allowfullscreen></iframe>
+
+    <script>
+        function showGame() {
+            document.getElementById('flappy-game').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .redirect-button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #00BFAE; /* Example button color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .redirect-button:hover {
+            background-color: #009B77; /* Darker color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Visit my Audiomack Page</h1>
+    <button class="redirect-button" onclick="redirectToAudiomack()">Go to Audiomack</button>
+
+    <script>
+        function redirectToAudiomack() {
+            window.location.href = 'https://audiomack.com/caltan';
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+        <p>More Websites:<a href="https://imagedisplayer.w3spaces.com/" target="_blank">Image Displayer</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
